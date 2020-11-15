@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: final-react
+  name: final-react
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: final-react
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yml
+        kompose.version: 1.22.0 (955b78124)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: final-react
+    spec:
+      containers:
+        - image: richimenendez/final-react
+          name: final-react
+          ports:
+            - containerPort: 80
+          resources: {}
+      restartPolicy: Always
+status: {}
