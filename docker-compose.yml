@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  final-react:
+    image: richimenendez/final-react
+    build: ./final-react
+    #image: analisis2practica3/front
+    ports:
+      - "80:80"
+    depends_on:
+      - final-server
+
+  final-server: # Ricardo
+    image: richimenendez/final-server
+    build: ./server
+    #image: analisis2practica3/microservicio1
+    # Exponemos el puerto 80 para que sea accesible para los otros servicios.
+    expose:
+      - "4200"
+    ports: 
+      - "4200:4200"
