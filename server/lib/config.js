@@ -4,8 +4,8 @@ module.exports= {
 
     },
     aws_remote_config:{
-        accessKeyId: 'AKIARBUDFE2BUCXR735R',
-        secretAccessKey: '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',
+        accessKeyId: 'numb',
+        secretAccessKey: 'num',
         region: 'us-east-2'
     }
 };
